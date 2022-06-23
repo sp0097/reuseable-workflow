@@ -3,7 +3,7 @@ name: Reusable workflow example
 on:
   workflow_call:
     inputs:
-      env:
+      area:
         required: true
         type: string
 
@@ -13,12 +13,10 @@ jobs:
     steps:
       - name: Build
         run: |
-           echo "Building on ${{ inputs.env }}"
-           
+           echo "Building on ${{ inputs.area }}"           
       - name: Unit Test
         run: |
-           echo "Unit Test on ${{ inputs.env }}"
-           
+           echo "Unit Test on ${{ inputs.area }}"           
       - name: Deployment
         run: |
-           echo "Deployment on ${{ inputs.env }}"
+           echo "Deployment on ${{ inputs.area }}"
