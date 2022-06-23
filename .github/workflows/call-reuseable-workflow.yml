@@ -14,3 +14,7 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       target: 'qa'
+  call-workflow-passing-data-staging:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      target: 'staging'
