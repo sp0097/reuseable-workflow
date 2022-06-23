@@ -8,6 +8,8 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: .github/workflows/reusable.yml
-    with:
-      env: devint
+    runs-on: ubuntu-latest
+    steps:
+      uses: .github/workflows/reusable.yml
+      with:
+        env: devint
