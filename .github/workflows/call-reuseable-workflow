@@ -1,0 +1,16 @@
+name: Call a reusable workflow
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-workflow:
+    uses: sp0097/reuseable-workflow/.github/workflows/reusable.yml
+
+  call-workflow-passing-data:
+    uses: .github/workflows/reusable.yml@main
+    with:
+      env: devint
