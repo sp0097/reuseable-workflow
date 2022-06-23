@@ -4,13 +4,13 @@ on:
   pull_request:
     branches:
       - main
-  push:
 
-
-#adding comment for diff
 jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable.yml
     with:
-      area: 'devint'
-
+      target: 'devint'
+  call-workflow-passing-data-qa:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      target: 'qa'
